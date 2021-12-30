@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import CardComp from "./CardComp";
 import { Row, Col } from "react-bootstrap";
 const lawyerData = [
@@ -15,7 +15,7 @@ const lawyerData = [
   {
     id: 2,
     lawyerName: "Paddy",
-    speciality: ["Divorse lawyer"],
+    speciality: ["Divorse lawyer", "Criminal lawyer"],
     payment: { fee: 11000, curency: "rupees" },
     availableTimings: "10AM-2PM",
     numberOfAppointmentsLeft: 6,
@@ -25,7 +25,7 @@ const lawyerData = [
   {
     id: 3,
     lawyerName: "Sam",
-    speciality: ["Divorse lawyer", "Propety lawyer"],
+    speciality: [ "Criminal lawyer", "Propety lawyer"],
     payment: { fee: 2000, curency: "rupees" },
     availableTimings: "10AM-2PM",
     numberOfAppointmentsLeft: 15,
@@ -45,7 +45,7 @@ const lawyerData = [
   {
     id: 5,
     lawyerName: "Akshay",
-    speciality: ["Divorse lawyer", "Propety lawyer"],
+    speciality: ["Divorse lawyer",  "Criminal lawyer"],
     payment: { fee: 4500, curency: "rupees" },
     availableTimings: "10AM-2PM",
     numberOfAppointmentsLeft: 3,
@@ -67,6 +67,10 @@ const decreaseslots = (ind) => {
 
   setLawyers([...lawyers]);
 };
+
+ useEffect(()=>{
+  window.scrollTo({top: 0, behavior: 'smooth'})
+ },[])
   return <div>
       <Row>
         {lawyers.map((lawyer,ind) => (

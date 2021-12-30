@@ -1,13 +1,84 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #eee !important;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.mycard {
+  transition: 0.5s;
+  border-radius: 10px !important;
+  text-align: center;
+  box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
+}
+
+.mycard:hover {
+  transform: scale(1.02);
+}
+.slots {
+  color: red;
+}
+.cost {
+  color: #000;
+  font-size: 16px;
+}
+.card_title {
+  display: flex;
+  padding-bottom: 20px;
+}
+.card_title p {
+  padding-left: 15px;
+}
+.card_title small {
+  
+  padding-left: 35px;
+  font-size: 12px;
+  font-style: italic;
+  color: #706e6ebe;
+}
+.card_title small::before {
+  content: "-";
+}
+.card_title,
+.law_speciality {
+  text-align: left;
+}
+.profile_image {
+  border-radius: 50%;
+}
+.law_speciality li {
+  color: gray;
+}
+
+.radio_btn_label,
+.active_class {
+  border: 1px solid rgb(87, 86, 86);
+  padding: 4px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+}
+.radiobtn_section input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+.radio_btn_label:hover {
+  background-color: rgba(214, 212, 212, 0.534);
+}
+.radio_btn_label input[type="radio"]:checked + label {
+  background-color: #bfb;
+  border-color: #4c4;
+}
+
+.active_class {
+  background-color: #4c4;
 }
